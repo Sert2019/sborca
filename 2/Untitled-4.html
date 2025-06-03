@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+     <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="42b825362ccf8279b9369bce65f661ba05014e6da6ed6681f4c3715c622ea2b2.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Материнская плата MSI PRO H610M-E DDR4 – надежная основа для построения офисного или домашнего ПК с универсальной производительностью. Данная плата основана на чипсете Intel H610 с процессорным разъемом LGA 1700 и обладает компактными размерами благодаря форм-фактору Micro-ATX. Для подключения необходимых комплектующих реализованы востребованные средства, среди которых отмечаются 2 слота под модули оперативной памяти объемом до 64 ГБ, по одному слоту расширения PCI-E x16 и PCI-E x1, 4 разъема SATA и 1 разъем M.2.</b>
+        </span>
+      </div>
+     <button id="addToBuild"> <img src="3524388 1.png" alt="" width="50" height="50"> </button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/56027c0307e7ed20/materinskaa-plata-msi-pro-h610m-e-ddr4/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+   <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Материнская плата MSI PRO H610M-E DDR4",
+    link: "https://www.dns-shop.ru/product/56027c0307e7ed20/materinskaa-plata-msi-pro-h610m-e-ddr4/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

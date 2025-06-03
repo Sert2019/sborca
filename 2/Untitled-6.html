@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="c3e01a8f9448fad1d1ef8e2bbf1a0dc44856425dad72948df234221d2ecb6b2a.jpg 1.png" alt="" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Материнская плата MSI AM5 B650 PRO B650M-P относится к профессиональной серии. Она обеспечивает высокую производительность и стабильность платформы в составе рабочей станции, где требуется бесперебойная работы программ. Типоразмер Micro-ATX предусматривает размещение комплектующей в компактном корпусе ПК. Плата поддерживает процессоры AMD с сокетом AM5 и оперативную память стандарта DDR5. Для подключения устройств хранения HDD/SSD предлагаются 2 разъема M.2 и 4 SATA. Из слотов расширения под графический ускоритель есть 1 PCI-E x16 и 2 PCI-E x1.
+Сетевой адаптер Realtek RTL8125BG гарантирует быстрый обмен данными с Интернетом на скорости до 2.5 Гбит/с. </b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/2a63664ce255ed20/materinskaa-plata-msi-pro-b650m-p/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Материнская плата MSI AM5 B650 PRO B650M-P",
+    link: "https://www.dns-shop.ru/product/2a63664ce255ed20/materinskaa-plata-msi-pro-b650m-p/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

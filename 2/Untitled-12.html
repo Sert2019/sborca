@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+     <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="1069443b89f0626a1b29b9cec7630479a79a865e7f91d4dacdbe7f5978697bef.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Оперативная память Corsair Vengeance RGB – комплект из двух модулей DIMM DDR5 по 16 ГБ с настраиваемой подсветкой. Модель оснащена технологией Power Management IC для управления питанием и радиатором для лучшего охлаждения. Поддержка ПО CORSAIR iCUE упрощает настройку режимов работы и прочих параметров памяти и других компонентов ПК.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/ca36d1ad676a44a7/operativnaa-pamat-corsair-vengeance-rgb-cmh32gx5m2b6000c40-32-gb/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Оперативная память Corsair Vengeance RGB",
+    link: "https://www.dns-shop.ru/product/ca36d1ad676a44a7/operativnaa-pamat-corsair-vengeance-rgb-cmh32gx5m2b6000c40-32-gb/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

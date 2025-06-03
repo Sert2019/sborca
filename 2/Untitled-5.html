@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+     <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="371191bf2617aca94962351d3b1728ab0696f66b8392cb80e904c4401ab27bc6.jpg 1.png" alt="" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Материнская плата MSI B650M BOMBER WIFI ориентирована на сборку домашнего или офисного системного блока для работы с мультимедиа и решения других задач. Модель на базе чипсета AMD B650 поддерживает процессоры AMD сокета AM5 с ядрами Granite Ridge, Phoenix и Raphael. Форм-фактор платы – Micro-ATX. Устройство с размерами 244x226 мм сочетает широкий функционал с возможностью установки в компактный корпус. Цифровая система питания реализует потенциал многоядерных CPU в играх и ресурсоемких приложениях.
+Материнская плата MSI B650M BOMBER WIFI поддерживает до 128 ГБ оперативной памяти DDR5, частота которой в разгоне может достигать 7800 МГц. В модели реализованы 2 слота расширения – PCI-E x16 и PCI-E x1. 2.5-гигабитный адаптер Realtek RTL8125BG обеспечивает скоростное проводное соединение с локальной сетью или Интернетом.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/ca2efb5ac35bd582/materinskaa-plata-msi-b650m-bomber-wifi/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+   <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Материнская плата MSI B650M BOMBER WIFI",
+    link: "https://www.dns-shop.ru/product/ca2efb5ac35bd582/materinskaa-plata-msi-b650m-bomber-wifi/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

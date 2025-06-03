@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="4e836d64618e0ce56357a6a571fa4d0f644a5600fe297db94f2fc97216c46992.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Оперативная память Kingston FURY Beast Black – это стильное и высокопроизводительное дополнение геймерской или оверклокерской системы настольного ПК. В комплект входит модуль DDR5 объемом 32 ГБ. Он функционирует на частоте до 6000 МГц и предусматривает разгон при помощи профилей XMP для достижения быстродействия при выполнении требовательных команд. Алюминиевый радиатор оригинальной формы способствует эффективному отведению тепла при разных вычислительных нагрузках. Kingston FURY Beast совместима с материнскими платами, в которых есть поддержка DDR5.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/a5753dfc87eded20/operativnaa-pamat-kingston-fury-beast-black-kf560c40bb-32-32-gb/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Оперативная память Kingston FURY Beast Black",
+    link: "https://www.dns-shop.ru/product/a5753dfc87eded20/operativnaa-pamat-kingston-fury-beast-black-kf560c40bb-32-32-gb/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

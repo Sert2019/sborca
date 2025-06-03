@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+   <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="b18ecbf52e67b7e911553f648e0ca13c46d21d8ead3ebe7754421954f4ae1055.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Кулер для процессора ID-COOLING FROZN A620 BLACK выполнен в черном цвете и предназначен для использования с процессором на сокете AM4, AM5, LGA 1150, LGA 1151 или с другим разъемом подключения. Универсальный башенный кулер с медным основанием, 6 теплотрубками и радиатором из алюминия монтируется над ЦПУ через прослойку из термопасты и отводит выделяемое им под нагрузкой тепло. Модель может отводить до 270 Вт тепловой энергии и подходит для производительных игровых сборок.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/ceeb01bd68baed20/kuler-dla-processora-id-cooling-frozn-a620-black/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Кулер для процессора ID-COOLING FROZN A620 BLACK",
+    link: "https://www.dns-shop.ru/product/ceeb01bd68baed20/kuler-dla-processora-id-cooling-frozn-a620-black/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

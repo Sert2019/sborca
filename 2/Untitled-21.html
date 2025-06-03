@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+     <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="3e8b81eb2af86e8b14e4354f464efb01f508af9955bbbcae302fef2b61d091eb.jpg 3.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Корпус DC-302G отличается эффектным внешним видом передней панели.Типоразмер модели – Midi-Tower. Корпус, обладающий совместимостью с материнскими платами Micro-ATX и Standard-ATX, может быть задействован при сборке универсальной домашней системы.Ничто не помешает вам собрать и рабочую станцию, отличающуюся высоким уровнем производительности.Корпус предоставляет возможности монтажа большого количества накопителей и многочисленных плат расширения. Количество слотов расширения – 7.Совместимые видеоадаптеры не должны иметь длину, превышающую 300 мм.Корпус DC-302G не укомплектован вентиляторами, но возможность их монтажа присутствует. Не слишком значительная (175 мм) ширина корпуса накладывает ограничения на максимальную высоту кулера процессора: величина данного показателя не должна превышать 145 мм.Размещение источника питания – верхнее.Блок питания в комплекте отсутствует.Длина и высота корпуса равны 325 и 405 мм соответственно.Модель упакована в коробку из плотного картона.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.ozon.ru/product/dexp-kompyuternyy-korpus-chernyy-a-1642063-dex-dc-302g-bl-c2799-dns-913123250/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Корпус DC-302G",
+    link: "https://www.ozon.ru/product/dexp-kompyuternyy-korpus-chernyy-a-1642063-dex-dc-302g-bl-c2799-dns-913123250/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+
+</body>
+
+</body>
+</html>

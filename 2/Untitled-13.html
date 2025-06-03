@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="1cc6f2d65653edab3b324c59cf823562410f1655dc6d1972c17b8d63bacff172.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Оперативная память Kingston ValueRAM ориентирована на использование в составе рабочих станций начального и среднего класса, а также домашних ПК. ОЗУ стандарта DDR4 объемом 16 ГБ обеспечивает повышение производительности при выполнении различных задач – запуск требовательных программ, загрузка страниц и прочие. Модуль функционирует на частоте 2666 МГц с низкими задержками. Обладая небольшой высотой 31.25 мм, оперативная память Kingston ValueRAM отличается широкой совместимостью с комплектующими различных производителей.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/1dbdee38fadfed20/operativnaa-pamat-kingston-valueram-kvr26n19s816-16-gb/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Оперативная память Kingston ValueRAM",
+    link: "https://www.dns-shop.ru/product/1dbdee38fadfed20/operativnaa-pamat-kingston-valueram-kvr26n19s816-16-gb/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+
+</body>
+
+</body>
+</html>

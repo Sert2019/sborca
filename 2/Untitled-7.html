@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="db3e8a381cb4ef78bb4021fabd4c15025c6b3f25091a758bfb94d9eebc9e5a3f.jpg 1.png" alt="" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Материнская плата ASUS TUF GAMING B650M-PLUS WIFI выделяется компактными размерами и высокопроизводительными характеристиками для создания мощного игрового компьютера. Она выполнена в черно-желтой расцветке и отличается надежной элементной базой в рамках линейки TUF. Для подключения необходимых комплектующих предусмотрены 4 отсека под модули DDR5, процессорный разъем AM5, 2 слота расширения PCI-E x16 для графических карт, 2 разъема M.2 и 4 слота SATA для запоминающих устройств.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    <a href="https://www.dns-shop.ru/product/683e8be463deed20/materinskaa-plata-asus-tuf-gaming-b650m-plus-wifi/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Материнская плата ASUS TUF GAMING B650M-PLUS WIFI",
+    link: "https://www.dns-shop.ru/product/683e8be463deed20/materinskaa-plata-asus-tuf-gaming-b650m-plus-wifi/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

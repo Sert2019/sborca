@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Untitled-3.css">
+    <script src="Untitled-1.js"></script>
+</head>
+<body>
+    
+ <div class="menu">
+  <div class="menu-icon">
+    <a href="">
+      <img src="9649870 3.png" alt="" width="70" height="70">
+    </a>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="block-left">
+  <div class="square"><img src="35d695c45955422e09ae27026d1bbcba117363edd59088c706725001ec2504d7.jpg 3.png" alt="" width="130" height="130"></div>
+  <div class="block-text" id="productName">ваша сборка</div>
+</div>
+
+   <div class="block-right">
+  <div id="componentsList"></div>
+  <button id="clearBuild">Очистить сборку</button>
+</div>
+
+<script>
+  // Получаем параметры из URL
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get('name');
+  if (name) {
+    document.getElementById('productName').textContent = name;
+  }
+</script>
+<script>
+// Функция отрисовки списка
+function renderComponents() {
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  const container = document.getElementById('componentsList');
+  
+  container.innerHTML = build.map(item => `
+    <div class="component-item">
+      <span>${item.name}</span>
+      <a href="${item.link}" target="_blank">Купить</a>
+    </div>
+  `).join('');
+}
+
+// Очистка списка
+document.getElementById('clearBuild').addEventListener('click', () => {
+  localStorage.removeItem('pcBuild');
+  renderComponents();
+});
+
+// Первичная отрисовка при загрузке
+document.addEventListener('DOMContentLoaded', renderComponents);
+</script>
+
+</body>
+</html>

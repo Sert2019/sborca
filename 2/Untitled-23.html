@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="c85ceee5919c8b67ae34f630b49390b99323fd9a2841493a61b75abc14f24c49.jpg 3.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Корпус ARDOR GAMING Rare MM1 выполнен в черном цвете и рассчитан на постройку системного блока с игровыми возможностями. Он допускает установку дискретного видеопроцессора, имеющего длину до 345 мм, и системы воздушного охлаждения для ЦПУ высотой не более 160 мм. Модель типоразмера Midtower поставляется без блока питания, который вы сможете выбрать с учетом энергопотребления получившейся сборки.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/b8740dbb77b4ed20/korpus-ardor-gaming-rare-mm1--cernyj/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+   <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Корпус ARDOR GAMING Rare MM1",
+    link: "https://www.dns-shop.ru/product/b8740dbb77b4ed20/korpus-ardor-gaming-rare-mm1--cernyj/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

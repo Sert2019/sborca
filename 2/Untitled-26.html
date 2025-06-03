@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="8aaf817e234e6bf101fce366d2bd49e87b333faff5f6ca3102df211494874ba7.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Блок питания ZALMAN MegaMax (TXll) [ZM500-TXII] отличается высокой энергоэффективностью, которая подтверждена сертификатом 80+ Standart. Надежность компонента обеспечена поддержкой технологий защиты OPP, OVP, SCP и UVP. БП демонстрирует общую выходную мощность по всем линиям порядка 500 Вт, чего будет достаточно для снабжения энергией всех модулей-потребителей в системном блоке домашней станции или даже игровой сборки начального уровня. Эта модель уверенно функционирует при входном напряжении на уровне 200-240 В при частоте переменного тока 50/60 Гц.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/09b4b1c0fc5b3332/blok-pitania-zalman-megamax-txll-zm500-txii-cernyj/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Блок питания ZALMAN MegaMax (TXll)",
+    link: "https://www.dns-shop.ru/product/09b4b1c0fc5b3332/blok-pitania-zalman-megamax-txll-zm500-txii-cernyj/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

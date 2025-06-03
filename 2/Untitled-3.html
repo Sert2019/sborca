@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="d18a3d7014f0c3290bcee6491c444640e8d6456022a06d246e7c9b52864c2ca6.jpg 2.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Процессор AMD Ryzen 7 3700X OEM отличается высокой мощностью и производительностью, что позволит использовать его для оснащения игровых компьютеров. Выполненный на основе 7-нм техпроцесса, чип имеет 8 ядер Matisse. Они обрабатывают данные в 16 потоков, благодаря чему поддерживается высокая скорость при решении рабочих задач и выполнении действий в играх. Частота процессора варьируется в зависимости от нагрузки в пределах 3.6-4.4 ГГц. Свободный множитель позволит еще увеличить данный показатель.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/4eae94861ec4ed20/processor-amd-ryzen-7-3700x-oem/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+
+<script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Процессор AMD Ryzen 7 3700X OEM",
+    link: "https://www.dns-shop.ru/product/4eae94861ec4ed20/processor-amd-ryzen-7-3700x-oem/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+</html>

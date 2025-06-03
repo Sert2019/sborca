@@ -1,0 +1,138 @@
+body {
+  background: #2E4165;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.beck{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.main-wrapper {
+  margin: 40px 0 0 40px;
+}
+
+.product-card {
+  display: flex; /* исправлено, чтобы display был корректным */
+  align-items: flex-start;
+  background: #CED2E4;
+  border-radius: 16px;
+  padding: 20px 30px 30px 20px;
+  width: 800px;
+  box-sizing: border-box;
+  position: relative;
+
+  margin: 0 auto; /* центрирует блок по горизонтали */
+}
+
+.product-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff;
+  margin-right: 18px;
+}
+
+.product-details {
+  margin-right: 22px;
+  margin-top: 2px;
+}
+
+.desc {
+  display: inline-block;
+  background: #5B5555;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  max-width: 400px;
+  line-height: 1.2;
+}
+
+.plus-sign {
+  font-size: 54px;
+  color: #222;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.shop-link {
+  display: inline-block;
+  background: #BEB935;
+  color: #222;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-left: 1000px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  
+}
+.shop-link:hover {
+  background: #e2e25b;
+}
+
+@media (max-width: 1280px) {
+  .main-wrapper {
+    margin: 20px 0 0 20px;
+    width: 90%;
+  }
+  .product-card {
+    width: 100%;
+    padding: 15px 20px 20px 15px;
+  }
+  .desc {
+    max-width: 280px;
+    font-size: 14px;
+  }
+  .shop-link {
+    margin-left: 0;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background: #2E4165;
+  }
+  .main-wrapper {
+    margin: 10px;
+    width: 100%;
+  }
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .product-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  .product-details {
+    margin: 0 0 10px 0;
+  }
+  .desc {
+    max-width: 100%;
+    font-size: 13px;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .shop-link {
+    margin-left: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+}

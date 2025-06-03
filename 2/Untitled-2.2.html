@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+  <div class="beck">
+     <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="e6293f21cc6d64c505e37405fa55d329827db7f8cd863e254841198e037f2386.jpg 1.png" alt="" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Процессор AMD Ryzen 5 7500F – модель с 6 производительными ядрами и трехуровневым кэшем. Чипсет способен одновременно обрабатывать до 12 вычислительных потоков информации, благодаря чему система сможет справиться с одновременным запуском нескольких ресурсоемких программ. Функционирование с тактовой частотой 3.7 ГГц и поддержка оперативной памяти DDR5 с объемом до 128 ГБ позволит компьютерной сборке стабильно работать в многозадачном режиме.
+Процессор AMD Ryzen 5 7500F имеет свободный множитель для ручного разгона тактовой частоты без изменения частоты системной шины, что позволит добиться увеличения производительности системы.</b>
+        </span>
+      </div>
+     <button id="addToBuild"> <img src="3524388 1.png" alt="" width="50" height="50"> </button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/d4bde9994d11ed20/processor-amd-ryzen-5-7500f-oem/?ysclid=mbf1inyjni329496877&utm_medium=organic&utm_source=yandex&utm_referrer=https%3A%2F%2Fyandex.ru%2F" class="shop-link">Ссылка в магазин</a>
+  
+</div>
+
+ <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Процессор AMD Ryzen 5 7500F",
+    link: "https://www.dns-shop.ru/product/d4bde9994d11ed20/processor-amd-ryzen-5-7500f-oem/?ysclid=mbf1inyjni329496877&utm_medium=organic&utm_source=yandex&utm_referrer=https%3A%2F%2Fyandex.ru%2F"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</script>
+</body>
+</html>

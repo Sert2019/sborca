@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="e2cd592ba9926384823bbb9861e266832faf8e99b6d73938ece1fecd139a47f2.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Кулер для процессора ID-COOLING SE-225-XT BLACK V2 [LGA1700] [SE-225-XT BLACK V2] башенного типа оснащен алюминиевыми ребрами для повышения эффективности. Вентилятор диаметром 12 см обеспечивает мощную работу при минимальном уровне шума. Он поддерживает регулировку вращения в пределах 1800 об/мин, что позволяет настроить его под ваши требования. Кулер ID-COOLING SE-225-XT BLACK V2 [LGA1700] [SE-225-XT BLACK V2] поставляется с универсальным крепежом, который позволяет его установку на различные сокеты, включая LGA1700.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/dab64ee34cbaed20/kuler-dla-processora-id-cooling-se-225-xt-black-v2-lga1700-se-225-xt-black/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Кулер для процессора ID-COOLING SE-225-XT BLACK V2",
+    link: "https://www.dns-shop.ru/product/dab64ee34cbaed20/kuler-dla-processora-id-cooling-se-225-xt-black-v2-lga1700-se-225-xt-black/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

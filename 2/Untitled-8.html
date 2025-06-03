@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="00b1b0a2b0a67e6ba9bd976ae20e1a1506bca0017521d302b004fcf6319bd059.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Видеокарта MSI GeForce RTX 4060 VENTUS 2X WHITE OC [GeForce RTX 4060 VENTUS 2X WHITE 8G OC] оснащена графическим процессором GeForce RTX 4060 на базе микроархитектуры NVIDIA Ada Lovelace. GPU произведен по техпроцессу 5 нм и отличается невысоким энергопотреблением. Потенциал видеопроцессора раскрывают 8 ГБ памяти GDDR6. Максимальная потребляемая мощность видеокарты – 115 Вт.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/697e6b357ec2ed20/videokarta-msi-geforce-rtx-4060-ventus-2x-white-oc-geforce-rtx-4060-ventus-2x-white-8g-oc/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Видеокарта MSI GeForce RTX 4060 VENTUS 2X WHITE OC",
+    link: "https://www.dns-shop.ru/product/697e6b357ec2ed20/videokarta-msi-geforce-rtx-4060-ventus-2x-white-oc-geforce-rtx-4060-ventus-2x-white-8g-oc/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

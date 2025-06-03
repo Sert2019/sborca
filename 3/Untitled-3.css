@@ -1,0 +1,100 @@
+body {
+  background: #354366;
+  margin: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  position: fixed; 
+  top: 20px;       
+  right: 40px;    
+  width: 70px;     
+  height: 70px;    
+  z-index: 1000;   
+  cursor: pointer; 
+}
+
+.menu-icon img {
+  width: 100%;     
+  height: auto;    
+  display: block;  
+}
+
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 80px 0 0 40px;
+}
+
+.block-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  background: #d9d9d9;
+  margin-bottom: 10px;
+}
+
+.block-text {
+  color: #fff;
+  font-size: 18px;
+}
+
+.block-right {
+  width: 300px;
+  height: 600px;
+  background: #cfd3e6;
+  color: #222;
+  padding: 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.block-right span {
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0; /* Убираем отступы, чтобы не смещать центр */
+}
+#componentsList {
+  margin-bottom: 20px;
+}
+
+.component-item {
+  padding: 8px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#clearBuild {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#clearBuild:hover {
+  background: #cc0000;
+}

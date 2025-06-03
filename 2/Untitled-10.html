@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="6e3e39dc95bed67bbd70d235d6717c9be68905e95f9d0948aa339e0ecf60d2b6.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Видеокарта KFA2 GeForce RTX 4060 Ti CORE обеспечивает высокую производительность графики в профессиональных приложениях и играх. Она создана с использованием архитектуры Ada Lovelace. Технология трассировки лучей усиливает визуальные впечатления от реализма, который достигается за счет насыщенности освещения и глубины теней на изображении. Процессор работает на частоте 2310 МГц и предусматривает разгон до 2565 МГц.</b>
+        </span>
+      </div>
+    <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/069bcdfbf2faed20/videokarta-kfa2-geforce-rtx-4060-ti-core-46isl8md8cok/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Видеокарта KFA2 GeForce RTX 4060 Ti CORE",
+    link: "https://www.dns-shop.ru/product/069bcdfbf2faed20/videokarta-kfa2-geforce-rtx-4060-ti-core-46isl8md8cok/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+</body>
+
+</body>
+</html>

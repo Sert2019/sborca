@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="76a3538dd198f27a37b4fd02a74bb6bfa0c3b809a5795a0ff87f60b1b9ef23a2.jpg 1.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Процессор Intel Core i3-12100 OEM предназначен для использования в настольных компьютерах. Он основан на архитектуре Intel Core 12-го поколения (Alder Lake-S) и имеет 4 ядра и 8 потоков. Базовая тактовая частота составляет 3.3 ГГц с возможностью повышения до 4.3 ГГц в режиме Turbo Boost.
+Процессор поддерживает оперативную память вплоть до уровня DDR5 с частотой до 4.8 ГГц и имеет 12 МБ кэш L3.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+
+    </div>
+    <a href="https://www.dns-shop.ru/product/ebd4f363fcc7ed20/processor-intel-core-i3-12100-oem/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Процессор Intel Core i3-12100 OEM",
+    link: "https://www.dns-shop.ru/product/ebd4f363fcc7ed20/processor-intel-core-i3-12100-oem/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+
+</body>
+</html>

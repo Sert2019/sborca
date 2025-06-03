@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Untitled-2.2.css">
+</head>
+<body>
+<body>
+  <div class="beck">
+    <a href="file:///C:/Users/777/Desktop/%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC/3/Untitled-3.html"><img src="9649870 2.png" alt="" align="right" width="70"></a>
+  <div class="main-wrapper">
+    <div class="product-card">
+      <img src="35d695c45955422e09ae27026d1bbcba117363edd59088c706725001ec2504d7.jpg 3.png" alt="Корпус" class="product-image">
+      <div class="product-details">
+        <span class="desc">
+          <b>Корпус LIAN LI Lancool 216RX выполнен в черном цвете и укомплектован тремя вентиляторами с ARGB-подсветкой. Два из них имеют диаметр 160 мм, один ‒ 140 мм. Шасси Mid-Tower дает возможность настроить водяное и воздушное охлаждение. Для фиксации вентилятора PCIe используется задний кронштейн. Спереди можно закрепить 10 вентиляторов, а сверху ‒ радиатор 360 с уплотнительной пластиной для защиты от утечки давления.</b>
+        </span>
+      </div>
+     <button id="addToBuild">
+  <img src="3524388 1.png" alt="Добавить" width="50" height="50">
+</button>
+    </div>
+    <a href="https://www.dns-shop.ru/product/2db6a8d1cf85ed20/korpus-lian-li-lancool-216-rgb-g99lan216rx10r-cernyj/" class="shop-link">Ссылка в магазин</a>
+  </div>
+  </div>
+  <script>
+document.getElementById('addToBuild').addEventListener('click', () => {
+  const product = {
+    name: "Корпус LIAN LI Lancool 216RX",
+    link: "https://www.dns-shop.ru/product/2db6a8d1cf85ed20/korpus-lian-li-lancool-216-rgb-g99lan216rx10r-cernyj/"
+  };
+  
+  // Получаем текущий список из localStorage
+  const build = JSON.parse(localStorage.getItem('pcBuild')) || [];
+  
+  // Добавляем новый компонент
+  build.push(product);
+  
+  // Сохраняем обновленный список
+  localStorage.setItem('pcBuild', JSON.stringify(build));
+  
+  // --- Больше никакого перехода! ---
+  // window.location.href = 'build.html';  // Удалите или закомментируйте эту строку
+
+  // Можно добавить обновление списка на странице:
+  if (typeof renderComponents === 'function') {
+    renderComponents();
+  }
+});
+
+</script>
+
+</body>
+
+</body>
+</html>
